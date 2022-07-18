@@ -1,0 +1,82 @@
+body{
+    margin-left:1%;
+    margin-top:2vh
+}
+
+#btn
+{
+    width: 99px;
+    color: rgb(21, 22, 22);
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+#btn:hover{
+ background-color: #c7e0f4
+}
+
+
+#sidebar
+{
+    height:79vh;
+    width:10em
+}
+
+#view
+{
+    height:79vh
+}
+
+#template
+{
+    margin-top:11px ;
+}
+
+.vl {
+    border-left: 1px solid rgb(238, 236, 236);
+    height: 12vh;
+    position: absolute;
+    margin-left: 27em;
+    margin-top: -2em;
+  }
+
+  #delete
+  {
+    cursor:pointer;
+  }
+  #subject
+  {
+    cursor:default;
+  }
+
+
+  #inp
+  {
+    width: 379px;
+  }
+
+  #alert{
+
+    margin-left: 995px;
+    margin-top: -30em;
+    text-align: center;
+    color:rgb(0, 110, 255);
+    
+  }
+
+  #child
+  {
+    text-align: center;
+    margin-top: em;
+    border: 1px dotted rgb(244, 241, 241);
+  }
+
+  #load
+  {
+    margin-top:em ;
+    /* opacity: 0.1; */
+  }
+
+
+
+  /*  */
+
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Outlook </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="stylesheet" href="/stylesheet/style2.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
+        integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/oclazyload/1.1.0/ocLazyLoad.min.js"
+        integrity="sha512-V59jxS4kcWe6bvHEeZCojXfPrwUx2XPLbaKXl2xff8jHpc9U0u+HYvA/JHFLX89VuZtyyUaVWcVOKgD1Umnjzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js"
+        integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <base href="/">
+
+</head>
+
+<body ng-app="myApp" ng-controller="mainCtrl">
+
+    <div class="row" id="header">
+        <div class="col-sm-2">
+            <h1 id="outlook">Outlook <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Microsoft_Outlook_2013-2019_logo.svg/2086px-Microsoft_Outlook_2013-2019_logo.svg.png"
+                    class="logo" id="outlooklogo"></h1>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" id="searchInput" type="text" placeholder="Search..." ng-model="search">
+        </div>
+        <div class="col-sm-1"><a href="#" class="btn " ng-click="addFolder()" id="addFolder"> <i
+                    class="fa-solid fa-folder-plus"> </i> </a></div>
+        <div class="col-sm-1"> <a href="#" class="btn" ng-click="compose()" id="compose"><span
+                    class="glyphicon glyphicon-send"></span></a></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-1"> <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt=""
+                    class="logo" id="microsoft"></a></div>
+
+    </div>
+
+    <hr>
+    <div class="row row container ">
+        <div class="col-sm-1" id="sidebar">
+            <div ng-repeat="x in folders"> <br><br> <a ui-sref="mail.file.preview({x:x.name})"
+                    class="btn " id="btn" ng-click="viewMesg($index)"> <i class="fa-solid fa-inbox" id="logos"></i>
+                    &nbsp;{{x.name}} </a> <br><br></div>
+        </div>
+        <div class="col-sm-1 "></div>
+
+      
+
+        <div class="col-sm-9 " id="view" ui-view>
+        </div>
+    </div>
+</body>
+
+<script src="/script/app.js"></script>
+<script src="/script/factory.js"></script>
+<script src="/script/uiroute.js"></script>
+<script src="/Controllers/mainController.js"></script>
+<script src="/Controllers/modalController.js"></script>
+<script src="/Controllers/childController.js"></script>
+<script src="/Controllers/modalControllerDelete.js"></script>
+<script src="/Controllers/sendModalController.js"></script>
+<script src="/Controllers/loadController.js"></script>
+<script src="/Controllers/loadChildController.js"></script>
+
+</html>

@@ -1,0 +1,31 @@
+<div class="row" id="viewHeader">
+    <div class="col-sm-2" id="subj">Subject:</div>
+    <div class="col-sm-2" id="time">Date:</div>
+    <div class="col-sm- 1" id="mesg">Move to Bin:</div>
+    <div class="col-sm- 1" id="desc">Description:</div>
+</div>
+
+
+<div>
+
+
+    <div class="row" ng-repeat="x in arrMessages  | filter:{subject:search}" id="template" >
+
+        <br><br>
+        <div class="col-sm-2" ui-sref="mail.file.preview({mesgId:$index})" id="subject">
+            <a href="#" id="subFocus">{{x.subject}}</a>
+        </div>
+
+        <div class="col-sm-2" id="timedisplay">{{time}}</div>
+
+        <div class="col-sm-1"> <i class="fa-solid fa-trash-can" id="delete" ng-click="deleteMesg($index)"
+                ng-model="$index" ng-init="a=11"></i> </div>
+                <div class="col-sm-3"></div>
+
+                
+    </div>
+</div>
+
+
+
+<div id="childView"  ui-view ></div>

@@ -1,0 +1,47 @@
+<div class="modal-body">
+    <center><img src="https://www.patientbond.com/hubfs/PB_LOGO_041718_Small@2x.png" height="59" width="70" alt=""></center>
+    <br><br>
+    <div class="form-group">
+        <form >
+            <div class="field">
+                <label>From</label>
+                <div >
+                    <input type="email" placeholder="sender's id" id="inp">
+                </div> <br>
+            </div>
+            <div class="field">
+                <label>To</label>
+                <div>
+                    <input type="email" placeholder="recipient's id" id="inp" >
+                </div> <br>
+            </div>
+            <div >
+                <label>Subject</label>
+                <div class="ui input">
+                    <input type="text" placeholder="Title" id="inp"  ng-model="subject">
+               
+                    <p>{{subject}}</p>
+               
+                </div> <br>
+            </div>
+            <div>
+                <label>Content</label>
+                <div class="ui input">
+               <textarea name="" id="" cols="50" rows="3" placeholder="..." ng-model="content"></textarea>
+
+               <p>{{content}}</p>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" ng-click="sendMesg()">Send</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+
+
+
